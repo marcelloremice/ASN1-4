@@ -5,9 +5,23 @@ import java.util.Scanner;
             Calc myCalculator = new Calc();
             //get user input for two numbers
             Scanner scan = new Scanner(System.in);
+            Scanner in = new Scanner(System.in);
             System.out.println("Please enter the first number: ");
+            while (!in.hasNextInt()) {
+                in.next();
+                System.out.println("Input was incorrect: ");
+            }
+            int x = in.nextInt();
             double n1 = scan.nextDouble();
+            
+            
             System.out.println("Please enter the second number: ");
+             while (!in.hasNextInt()) {
+                in.next();
+                System.out.println("Input was incorrect: ");
+            }
+            
+            
             double n2 = scan.nextDouble();
 
             //pass the numbers to the Calc object
